@@ -1,7 +1,9 @@
 # kernel.sh
 Compiling the Linux Kernel from source made easy!
 
+## Download and execute the script:
 ```bash
+wget https://raw.githubusercontent.com/Remzi1993/kernel.sh/master/kernel.sh
 bash ./kernel.sh
 ```
 
