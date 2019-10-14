@@ -6,6 +6,7 @@ set -x
 
 # The kernel.sh script
 # Step 1. Install the required compilers and other tools
+sudo apt update
 sudo apt install curl build-essential libncurses-dev bison flex libssl-dev libelf-dev
 
 read -p "Enter the Linux Kernel version you would like to install: " version
@@ -20,7 +21,7 @@ curl -O https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-"$version".tar.xz
 unxz -v linux-"$version".tar.xz
 
 # Step 3b. Verify Linux kernel tartball with pgp - optional
-gpg --recv-keys 647F28654894E3BD457199BE38DBBDC86092693E # recent key
+gpg --recv-keys 647F28654894E3BD457199BE38DBBDC86092693E # Get recent public key to verify file
 curl -O https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-"$version".tar.sign
 gpg --verify linux-"$version".tar.sign
 tar xvf linux-"$version".tar
