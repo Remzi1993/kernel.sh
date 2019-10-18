@@ -21,3 +21,4 @@
 # Specific to this project
 .config
 linux-*
+test.sh
